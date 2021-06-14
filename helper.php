@@ -1,4 +1,10 @@
 <?php
+/*
+    * @ ZippyShare Cracker
+    * @ Version 1.0
+    * @ Created by Muhammad Randika Rosyid
+*/
+
 function curl($url)
 {
     $ch = curl_init($url);

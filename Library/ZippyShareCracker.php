@@ -1,4 +1,9 @@
 <?php
+/*
+    * @ ZippyShare Cracker
+    * @ Version 1.0
+    * @ Created by Muhammad Randika Rosyid
+*/
 namespace App\Library;
 
 class ZippyShareCracker

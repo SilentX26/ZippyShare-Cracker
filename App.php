@@ -68,7 +68,7 @@ class App
             $value = trim($value);
 
             if($this->_resourceIsZippy($value) == 1) {
-                callClass('ZippyShareCracker', $value);
+                callClass('App\Library\ZippyShareCracker', $value);
             } else {
                 echo outputColor("Resource {$value} tidak dapat diproses, pastikan URL yang anda masukkan ialah URL dari domain zippyshare.", 'error');
             }

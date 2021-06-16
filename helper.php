@@ -5,6 +5,10 @@
     * @ Created by Muhammad Randika Rosyid
 */
 
+/*
+    * fungsi yang akan mengirim request ke web zippyshare
+    * @ Return type: String
+*/
 function curl($url)
 {
     $ch = curl_init($url);
@@ -18,21 +22,38 @@ function curl($url)
     return curl_exec($ch);
 }
 
+/*
+    * fungsi yang akan memvalidasi URL yang diinput oleh user
+    * @ Return type: Bool
+*/
 function validUrl($url)
 {
     return filter_var($url, FILTER_VALIDATE_URL);
 }
 
+/*
+    * fungsi yang akan menerima input dari command line
+    * @ Return type: String
+*/
 function input()
 {
     return trim(fgets(STDIN));
 }
 
+/*
+    * fungsi yang akan memanggil class yang diperlukan
+    * @ Return type: Void
+*/
 function callClass($class, $param = NULL)
 {
     (!empty($param)) ? new $class($param) : new $class;
 }
 
+/*
+    * fungsi yang akan mengembalikan output yang sudah terformat warna
+    * fungsi ini akan memanggil class ClicoText
+    * @ Return type: String
+*/
 function outputColor($text, $mode)
 {
     $dataMode = [
